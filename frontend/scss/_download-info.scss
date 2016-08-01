@@ -1,0 +1,48 @@
+@mixin font-style() {
+  font-size: $font-size--lg;
+}
+
+.download-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 300px;
+  text-align: center;
+  &__slogan {
+    margin-bottom: 36px;
+    font-family: $font-family-base;
+    font-size: $font-size--lg;
+    font-weight: 300;
+  }
+  &__link {
+    display: block;
+    padding: 15px 0;
+    margin-bottom: 45px;
+    font-weight: 700;
+    color: $white;
+    border: solid 4px;
+    border-radius: 50px;
+  }
+  &__description {
+    font-weight: 300;
+    opacity: 0.6;
+  }
+}
+
+.quick-download {
+  &__item {
+    width: 22%;
+    display: inline-block;
+    height: 51px;
+  }
+  &__item:first-child {
+    height: 56px;
+  }
+  &__apple-logo,
+  &__microsoft-logo,
+  &__android-logo {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+}

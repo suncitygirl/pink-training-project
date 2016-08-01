@@ -1,0 +1,237 @@
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+
+.main-nav {
+  display: block;
+  width: 100%;
+  padding: 0 10%;
+  font-weight: 300;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-sizing: border-box; }
+  .main-nav__container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto; }
+  @media (min-width: 1200px) {
+    .main-nav__list {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-left: 12%; }
+      .main-nav__list li {
+        text-align: center;
+        list-style: none; }
+      .main-nav__list a {
+        color: #fff; }
+      .main-nav__list__open-menu {
+        display: none; } }
+  @media (max-width: 1200px) {
+    .main-nav__list {
+      display: none; } }
+  @media (max-width: 1200px) {
+    .main-nav__open-menu {
+      width: 50px;
+      height: 25px; } }
+  @media (min-width: 1200px) {
+    .main-nav__open-menu {
+      display: none; } }
+  .main-nav__logo {
+    display: block;
+    width: 146px;
+    height: 46px; }
+    @media (max-width: 700px) {
+      .main-nav__logo {
+        width: 77px;
+        height: 27px; } }
+    .main-nav__logo-desktop, .main-nav__logo-mobile, .main-nav__logo-tablet {
+      display: none;
+      max-width: 100%;
+      max-height: 100%; }
+    @media (min-width: 1200px) {
+      .main-nav__logo-desktop {
+        display: block; } }
+    @media (max-width: 1199px) and (min-width: 701px) {
+      .main-nav__logo-tablet {
+        display: block; } }
+    @media (max-width: 700px) {
+      .main-nav__logo-mobile {
+        display: block; } }
+  .main-nav .menu-burger {
+    max-width: 100%;
+    max-height: 100%; }
+  .main-nav__item:first-child {
+    -webkit-flex-grow: 0.524;
+    -ms-flex-positive: 0.524;
+    flex-grow: 0.524;
+    padding: 32px 0; }
+  .main-nav__item:nth-child(2) {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1; }
+
+.intro {
+  padding: 1px;
+  box-sizing: border-box; }
+  @media (min-width: 700px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 700px) and (min-resolution: 192dpi) {
+    .intro {
+      background: url("../img/background-2@2x.jpg") #283645 no-repeat center;
+      background-size: cover; } }
+  @media (max-width: 700px) and (-webkit-min-device-pixel-ratio: 3), (max-width: 700px) and (min-resolution: 288dpi) {
+    .intro {
+      background: url("../img/background-1@3x.jpg") #283645 no-repeat center;
+      background-size: cover; } }
+  @media (max-width: 700px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 700px) and (min-resolution: 192dpi) {
+    .intro {
+      background: url("../img/background-1@2x.jpg") #283645 no-repeat center;
+      background-size: cover; } }
+  @media (max-width: 700px) {
+    .intro {
+      min-height: 456px;
+      background: url("../img/background-1@1x.jpg") #283645 no-repeat center;
+      background-size: cover; } }
+  @media (min-width: 700px) {
+    .intro {
+      min-height: 854px;
+      background: url("../img/background-2@1x.jpg") #283645 no-repeat center;
+      background-size: cover; } }
+  .intro__content {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10%;
+    color: #fff; }
+    @media (min-width: 701px) {
+      .intro__content {
+        margin-top: 225px; } }
+    @media (max-width: 700px) {
+      .intro__content {
+        margin-top: 95px; } }
+  .intro__photo {
+    position: absolute;
+    border: solid 1px; }
+    @media (max-width: 1200px) {
+      .intro__photo {
+        width: 470px;
+        height: 545px;
+        background: url("../img/iphone-hand-2@1x.png") no-repeat left; } }
+    @media (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1200px) and (min-resolution: 192dpi) {
+      .intro__photo {
+        width: 470px;
+        height: 545px;
+        background: url("../img/iphone-hand-2@2x.png") no-repeat left; } }
+    @media (max-width: 700px) {
+      .intro__photo {
+        width: 257px;
+        height: 285px;
+        background: url("../img/iphone-hand-1.png") no-repeat 50% 0;
+        background-size: auto; } }
+    @media (max-width: 700px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 700px) and (min-resolution: 192dpi) {
+      .intro__photo {
+        width: 257px;
+        height: 285px;
+        background: url("../img/iphone-hand-1@2x.png") no-repeat left; } }
+    @media (max-width: 700px) and (-webkit-min-device-pixel-ratio: 3), (max-width: 700px) and (min-resolution: 288dpi) {
+      .intro__photo {
+        width: 257px;
+        height: 285px;
+        background: url("../img/iphone-hand-1@3x.png") no-repeat left; } }
+    @media (min-width: 1201px) {
+      .intro__photo {
+        width: 565px;
+        height: 645px;
+        background: url("../img/iphone-hand-3@1x.png") no-repeat left; } }
+    @media (min-width: 1201px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1201px) and (min-resolution: 192dpi) {
+      .intro__photo {
+        width: 565px;
+        height: 645px;
+        background: url("../img/iphone-hand-3@2x.png") no-repeat; } }
+
+.download-info {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 300px;
+  text-align: center; }
+  .download-info__slogan {
+    margin-bottom: 36px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 5rem;
+    font-weight: 300; }
+  .download-info__link {
+    display: block;
+    padding: 15px 0;
+    margin-bottom: 45px;
+    font-weight: 700;
+    color: #fff;
+    border: solid 4px;
+    border-radius: 50px; }
+  .download-info__description {
+    font-weight: 300;
+    opacity: 0.6; }
+
+.quick-download__item {
+  width: 22%;
+  display: inline-block;
+  height: 51px; }
+
+.quick-download__item:first-child {
+  height: 56px; }
+
+.quick-download__apple-logo, .quick-download__microsoft-logo, .quick-download__android-logo {
+  max-width: 100%;
+  max-height: 100%; }
+
+html {
+  font-size: 10px;
+  min-width: 320px; }
+
+body {
+  margin: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: #283645;
+  background-color: #fff; }
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+a {
+  color: #d22856;
+  text-decoration: none; }
+
+/*# sourceMappingURL=maps/style.css.map */
