@@ -7,10 +7,15 @@
 .main-nav {
     display: block;
     width: 100%;
-    padding: 0 10%;
     font-weight: 300;
     background-color: rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
+    @media(min-width: 1200px) {
+      padding: 0 10%;
+    }
+    @media(max-width: 1199px) {
+      padding: 0 (40px/700px * 100%);
+    }
     &__container {
         @include flex-list();
         max-width: 960px;
@@ -31,12 +36,12 @@
                 display: none;
             }
         }
-        @media(max-width: 1200px) {
+        @media(max-width: 1199px) {
             display: none;
         }
     }
     &__open-menu {
-        @media(max-width: 1200px) {
+        @media(max-width: 1199px) {
             width: 50px;
             height: 25px;
         }
@@ -48,7 +53,7 @@
         display: block;
         width: 146px;
         height: 46px;
-        @media(max-width: 700px) {
+        @media(max-width: 699px) {
             width: 77px;
             height: 27px;
         }
@@ -64,12 +69,12 @@
                 display: block;
             }
         }
-        @media(max-width: 1199px) and (min-width: 701px) {
+        @media(max-width: 1199px) and (min-width: 700px) {
             &-tablet {
                 display: block;
             }
         }
-        @media(max-width: 700px) {
+        @media(max-width: 699px) {
             &-mobile {
                 display: block;
             }

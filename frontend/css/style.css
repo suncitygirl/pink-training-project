@@ -7,10 +7,15 @@
 .main-nav {
   display: block;
   width: 100%;
-  padding: 0 10%;
   font-weight: 300;
   background-color: rgba(0, 0, 0, 0.3);
   box-sizing: border-box; }
+  @media (min-width: 1200px) {
+    .main-nav {
+      padding: 0 10%; } }
+  @media (max-width: 1199px) {
+    .main-nav {
+      padding: 0 5.71429%; } }
   .main-nav__container {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -48,10 +53,10 @@
         color: #fff; }
       .main-nav__list__open-menu {
         display: none; } }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .main-nav__list {
       display: none; } }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .main-nav__open-menu {
       width: 50px;
       height: 25px; } }
@@ -62,7 +67,7 @@
     display: block;
     width: 146px;
     height: 46px; }
-    @media (max-width: 700px) {
+    @media (max-width: 699px) {
       .main-nav__logo {
         width: 77px;
         height: 27px; } }
@@ -73,10 +78,10 @@
     @media (min-width: 1200px) {
       .main-nav__logo-desktop {
         display: block; } }
-    @media (max-width: 1199px) and (min-width: 701px) {
+    @media (max-width: 1199px) and (min-width: 700px) {
       .main-nav__logo-tablet {
         display: block; } }
-    @media (max-width: 700px) {
+    @media (max-width: 699px) {
       .main-nav__logo-mobile {
         display: block; } }
   .main-nav .menu-burger {
@@ -95,84 +100,89 @@
 .intro {
   padding: 1px;
   box-sizing: border-box; }
-  @media (min-width: 700px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 700px) and (min-resolution: 192dpi) {
-    .intro {
-      background: url("../img/background-2@2x.jpg") #283645 no-repeat center;
-      background-size: cover; } }
-  @media (max-width: 700px) and (-webkit-min-device-pixel-ratio: 3), (max-width: 700px) and (min-resolution: 288dpi) {
-    .intro {
-      background: url("../img/background-1@3x.jpg") #283645 no-repeat center;
-      background-size: cover; } }
-  @media (max-width: 700px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 700px) and (min-resolution: 192dpi) {
-    .intro {
-      background: url("../img/background-1@2x.jpg") #283645 no-repeat center;
-      background-size: cover; } }
-  @media (max-width: 700px) {
-    .intro {
-      min-height: 456px;
-      background: url("../img/background-1@1x.jpg") #283645 no-repeat center;
-      background-size: cover; } }
   @media (min-width: 700px) {
     .intro {
       min-height: 854px;
       background: url("../img/background-2@1x.jpg") #283645 no-repeat center;
       background-size: cover; } }
+  @media (max-width: 1199px) {
+    .intro {
+      min-height: 728px; } }
+  @media (min-width: 700px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 700px) and (min-resolution: 192dpi) {
+    .intro {
+      background: url("../img/background-2@2x.jpg") #283645 no-repeat center; } }
+  @media (max-width: 699px) {
+    .intro {
+      min-height: 735px;
+      background: url("../img/background-1@1x.jpg") #283645 no-repeat 0 -275px;
+      background-size: cover; } }
+  @media (max-width: 699px) and (-webkit-min-device-pixel-ratio: 3), (max-width: 699px) and (min-resolution: 288dpi) {
+    .intro {
+      background: url("../img/background-1@3x.jpg") #283645 no-repeat center; } }
+  @media (max-width: 699px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 699px) and (min-resolution: 192dpi) {
+    .intro {
+      background: url("../img/background-1@2x.jpg") #283645 no-repeat center; } }
   .intro__content {
+    position: relative;
     max-width: 960px;
-    width: 100%;
     margin: 0 auto;
-    padding: 0 10%;
     color: #fff; }
     @media (min-width: 701px) {
       .intro__content {
         margin-top: 225px; } }
-    @media (max-width: 700px) {
+    @media (max-width: 699px) {
       .intro__content {
         margin-top: 95px; } }
+    @media (min-width: 1200px) {
+      .intro__content {
+        padding: 0 10%; } }
+    @media (max-width: 1199px) {
+      .intro__content {
+        padding: 0 5.71429%; } }
   .intro__photo {
     position: absolute;
-    border: solid 1px; }
-    @media (max-width: 1200px) {
+    z-index: 1;
+    top: -17px;
+    right: 12.5%; }
+    @media (max-width: 1199px) {
       .intro__photo {
+        top: -44px;
+        right: 5%;
         width: 470px;
         height: 545px;
-        background: url("../img/iphone-hand-2@1x.png") no-repeat left; } }
-    @media (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1200px) and (min-resolution: 192dpi) {
+        background: url("../img/iphone-hand-2@1x.png") no-repeat 80% 0; } }
+    @media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (min-resolution: 192dpi) {
       .intro__photo {
-        width: 470px;
-        height: 545px;
-        background: url("../img/iphone-hand-2@2x.png") no-repeat left; } }
+        background: url("../img/iphone-hand-2@2x.png") no-repeat 80% 0; } }
     @media (max-width: 700px) {
       .intro__photo {
         width: 257px;
         height: 285px;
-        background: url("../img/iphone-hand-1.png") no-repeat 50% 0;
-        background-size: auto; } }
+        margin: 0 auto;
+        left: -6%;
+        top: 78px;
+        background: url("../img/iphone-hand-1.png") no-repeat 68% 0; } }
     @media (max-width: 700px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 700px) and (min-resolution: 192dpi) {
       .intro__photo {
-        width: 257px;
-        height: 285px;
-        background: url("../img/iphone-hand-1@2x.png") no-repeat left; } }
+        background: url("../img/iphone-hand-1@2x.png") no-repeat 68% 0; } }
     @media (max-width: 700px) and (-webkit-min-device-pixel-ratio: 3), (max-width: 700px) and (min-resolution: 288dpi) {
       .intro__photo {
-        width: 257px;
-        height: 285px;
-        background: url("../img/iphone-hand-1@3x.png") no-repeat left; } }
-    @media (min-width: 1201px) {
+        background: url("../img/iphone-hand-1@3x.png") no-repeat 68% 0; } }
+    @media (min-width: 1200px) {
       .intro__photo {
         width: 565px;
         height: 645px;
-        background: url("../img/iphone-hand-3@1x.png") no-repeat left; } }
+        background: url("../img/iphone-hand-3@1x.png") no-repeat 68% 0; } }
     @media (min-width: 1201px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1201px) and (min-resolution: 192dpi) {
       .intro__photo {
-        width: 565px;
-        height: 645px;
         background: url("../img/iphone-hand-3@2x.png") no-repeat; } }
 
 .download-info {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  z-index: 2;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -181,11 +191,20 @@
   justify-content: flex-start;
   width: 300px;
   text-align: center; }
+  @media (max-width: 699px) {
+    .download-info {
+      margin: 0 auto; } }
   .download-info__slogan {
     margin-bottom: 36px;
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 5rem;
     font-weight: 300; }
+    @media (max-width: 699px) {
+      .download-info__slogan {
+        margin-bottom: 340px;
+        font-size: 2.4rem;
+        opacity: 0.6;
+        font-weight: 400; } }
   .download-info__link {
     display: block;
     padding: 15px 0;
@@ -194,21 +213,27 @@
     color: #fff;
     border: solid 4px;
     border-radius: 50px; }
+    @media (max-width: 699px) {
+      .download-info__link {
+        margin-bottom: 30px; } }
   .download-info__description {
     font-weight: 300;
     opacity: 0.6; }
 
-.quick-download__item {
-  width: 22%;
-  display: inline-block;
-  height: 51px; }
-
-.quick-download__item:first-child {
-  height: 56px; }
-
-.quick-download__apple-logo, .quick-download__microsoft-logo, .quick-download__android-logo {
-  max-width: 100%;
-  max-height: 100%; }
+.quick-download {
+  margin-bottom: 15px; }
+  @media (max-width: 699px) {
+    .quick-download {
+      margin-bottom: 0; } }
+  .quick-download__item {
+    width: 22%;
+    display: inline-block;
+    height: 51px; }
+  .quick-download__item:first-child {
+    height: 56px; }
+  .quick-download__apple-logo, .quick-download__microsoft-logo, .quick-download__android-logo {
+    max-width: 100%;
+    max-height: 100%; }
 
 html {
   font-size: 10px;

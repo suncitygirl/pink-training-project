@@ -4,15 +4,26 @@
 
 .download-info {
   display: flex;
+  position: relative;
+  z-index: 2;
   flex-direction: column;
   justify-content: flex-start;
   width: 300px;
   text-align: center;
+  @media(max-width: 699px) {
+    margin: 0 auto;
+  }
   &__slogan {
     margin-bottom: 36px;
     font-family: $font-family-base;
     font-size: $font-size--lg;
     font-weight: 300;
+    @media(max-width: 699px) {
+      margin-bottom: 340px;
+      font-size: $font-size--md;
+      opacity: 0.6;
+      font-weight: 400;
+    }
   }
   &__link {
     display: block;
@@ -22,6 +33,9 @@
     color: $white;
     border: solid 4px;
     border-radius: 50px;
+    @media(max-width: 699px) {
+      margin-bottom: 30px;
+    }
   }
   &__description {
     font-weight: 300;
@@ -30,6 +44,10 @@
 }
 
 .quick-download {
+  margin-bottom: 15px;
+  @media(max-width: 699px) {
+    margin-bottom: 0;
+  }
   &__item {
     width: 22%;
     display: inline-block;
