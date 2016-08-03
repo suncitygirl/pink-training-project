@@ -1,0 +1,28 @@
+.promo {
+  position: relative;
+  padding-top: 50px;
+
+  &__slogan {
+    width: 740px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    font-size: $font-size--lg;
+    font-weight: 300;
+    color: $blue;
+    text-align: center;
+    &--narrow {
+      display: block;
+      width: 725px;
+    }
+  }
+  // &:before {
+  //   content: "";
+  //   width: 100%;
+  //   position: absolute;
+  //   z-index: -1;
+  //   top: 340px;
+  //   height: 100px;
+  //   background-color: #f2f2f2;
+  //   transform: skewY(-5deg);
+  // }
+}

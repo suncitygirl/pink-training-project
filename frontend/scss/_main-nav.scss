@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 .main-nav {
     display: block;
@@ -11,10 +12,10 @@
     background-color: rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     @media(min-width: 1200px) {
-      padding: 0 10%;
+        padding: 0 10%;
     }
     @media(max-width: 1199px) {
-      padding: 0 (40px/700px * 100%);
+        padding: 0 (40px/700px * 100%);
     }
     &__container {
         @include flex-list();
