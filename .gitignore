@@ -1,6 +1,9 @@
 *.log
+
 .DS_Store
 .sass-cache
 .idea
+.yml
+
 node_modules/
 
