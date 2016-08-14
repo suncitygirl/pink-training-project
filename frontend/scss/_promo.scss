@@ -34,6 +34,9 @@
         transform: rotate(-4.5deg);
         background-color: #f2f2f2;
         background-clip: content-box;
+        @media(min-width: 700px) and (max-width: 1199px) {
+          height: 400px;
+        }
     }
     &:after {
       content: " ";
@@ -46,6 +49,10 @@
       background-color: #f2f2f2;
       @media(max-width: 699px) {
         height: 500px;
+      }
+      @media(min-width: 700px) and (max-width: 1199px) {
+        top: 50%;
+        height: 175px;
       }
     }
 }
