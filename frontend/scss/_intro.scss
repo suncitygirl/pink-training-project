@@ -13,15 +13,15 @@
         background: url("../img/background-2@2x.jpg") $blue no-repeat center;
     }
     @media(max-width: 699px) {
-        min-height: 735px;
-        background: url("../img/background-1@1x.jpg") $blue no-repeat 0 -275px;
+        min-height: 937px;
+        background: url("../img/background-1@1x.jpg") $blue no-repeat 0 -419px;
         background-size: cover;
     }
-    @media(max-width: 699px) and (min-resolution: 288dpi) {
-        background: url("../img/background-1@3x.jpg") $blue no-repeat center;
-    }
     @media(max-width: 699px) and (min-resolution: 192dpi) {
-        background: url("../img/background-1@2x.jpg") $blue no-repeat center;
+        background: url("../img/background-1@2x.jpg") $blue no-repeat 0 -419px;
+    }
+    @media(max-width: 699px) and (min-resolution: 288dpi) {
+        background: url("../img/background-1@3x.jpg") $blue no-repeat 0 -419px;
     }
     &__content {
         position: relative;
@@ -31,14 +31,14 @@
         @media(min-width: 701px) {
             margin-top: 225px;
         }
-        @media(max-width: 699px) {
-            margin-top: 95px;
-        }
         @media(min-width: 1200px) {
             padding: 0 10%;
         }
         @media(max-width: 1199px) {
             padding: 0 (40px/700px * 100%);
+        }
+        @media(max-width: 699px) {
+            margin-top: 135px;
         }
     }
     &__photo {
@@ -56,18 +56,19 @@
         @media(max-width: 1199px) and (min-resolution: 192dpi) {
             background: url("../img/iphone-hand-2@2x.png") no-repeat 80% 0;
         }
-        @media(max-width: 700px) {
-            width: 257px;
-            height: 285px;
+        @media(max-width: 699px) {
+            width: 257px * 1.5;
+            height: 285px * 1.5;
             margin: 0 auto;
             left: -6%;
-            top: 78px;
+            top: 134px;
             background: url("../img/iphone-hand-1.png") no-repeat 68% 0;
+            background-size: cover;
         }
-        @media(max-width: 700px) and (min-resolution: 192dpi) {
+        @media(max-width: 699px) and (min-resolution: 192dpi) {
             background: url("../img/iphone-hand-1@2x.png") no-repeat 68% 0;
         }
-        @media(max-width: 700px) and (min-resolution: 288dpi) {
+        @media(max-width: 699px) and (min-resolution: 288dpi) {
             background: url("../img/iphone-hand-1@3x.png") no-repeat 68% 0;
         }
         @media(min-width: 1200px) {

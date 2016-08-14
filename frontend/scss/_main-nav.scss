@@ -17,6 +17,9 @@
     @media(max-width: 1199px) {
         padding: 0 (40px/700px * 100%);
     }
+    @media(max-width: 699px) {
+        max-height: 100px;
+    }
     &__container {
         @include flex-list();
         max-width: 960px;
@@ -42,21 +45,27 @@
         }
     }
     &__open-menu {
-        @media(max-width: 1199px) {
-            width: 50px;
-            height: 25px;
+        @media(max-width: 1199px) and (min-width: 700px) {
+            width: 60px;
+            height: 35px;
+            margin-top: 10px;
         }
         @media(min-width: 1200px) {
             display: none;
         }
+        @media(max-width: 699px) {
+            margin-top: -25px;
+            width: 70px;
+        }
+
     }
     &__logo {
         display: block;
         width: 146px;
         height: 46px;
         @media(max-width: 699px) {
-            width: 77px;
-            height: 27px;
+            width: 110px;
+            margin-top: -25px;
         }
         &-desktop,
         &-mobile,
