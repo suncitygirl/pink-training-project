@@ -1,0 +1,54 @@
+.price-table {
+    margin: 0 auto;
+    border: solid 3px $dark-gray;
+    border-collapse: collapse;
+    font-size: $font-size;
+    line-height: 30px;
+    & td {
+        border: solid 3px $dark-gray;
+        border-collapse: collapse;
+    }
+    &__hidden {
+        visibility: hidden;
+    }
+    &__option {
+        padding: 10px 60px 10px 22px;
+        color: $blue;
+    }
+    &__rate {
+        position: relative;
+        text-align: center;
+        width: 125px;
+        padding: 12px 80px;
+        background-color: $blue;
+        color: $white;
+        border: solid $white 3px;
+        &--price {
+            font-size: $font-size--md;
+            display: block;
+        }
+        &--hit-icon {
+          position: absolute;
+          top:0;
+          left: 0;
+        }
+    }
+    &__icon {
+        height: 5px;
+        padding: 12px 0;
+        &--check {
+            max-width: 100%;
+            max-height: 100%;
+            fill: $green;
+        }
+        &--cross {
+            max-width: 100%;
+            max-height: 100%;
+            fill: $red;
+        }
+    }
+}
+
+.price-list__item {
+  margin-bottom: 95px;
+}

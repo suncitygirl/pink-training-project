@@ -515,6 +515,7 @@
     cursor: pointer;
     font-size: 80px;
     font-weight: 100;
+    display: none;
     color: #bec2c7;
     position: absolute;
     top: 20%;
@@ -601,6 +602,50 @@
 #carousel__open--2:checked ~ .carousel__control--2,
 #carousel__open--3:checked ~ .carousel__control--3 {
   display: block; }
+
+.price-table {
+  margin: 0 auto;
+  border: solid 3px #dedede;
+  border-collapse: collapse;
+  font-size: 1.8rem;
+  line-height: 30px; }
+  .price-table td {
+    border: solid 3px #dedede;
+    border-collapse: collapse; }
+  .price-table__hidden {
+    visibility: hidden; }
+  .price-table__option {
+    padding: 10px 60px 10px 22px;
+    color: #283645; }
+  .price-table__rate {
+    position: relative;
+    text-align: center;
+    width: 125px;
+    padding: 12px 80px;
+    background-color: #283645;
+    color: #fff;
+    border: solid #fff 3px; }
+    .price-table__rate--price {
+      font-size: 2.4rem;
+      display: block; }
+    .price-table__rate--hit-icon {
+      position: absolute;
+      top: 0;
+      left: 0; }
+  .price-table__icon {
+    height: 5px;
+    padding: 12px 0; }
+    .price-table__icon--check {
+      max-width: 100%;
+      max-height: 100%;
+      fill: #3dc644; }
+    .price-table__icon--cross {
+      max-width: 100%;
+      max-height: 100%;
+      fill: #f25b26; }
+
+.price-list__item {
+  margin-bottom: 95px; }
 
 html {
   font-size: 10px;
