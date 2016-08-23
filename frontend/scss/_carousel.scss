@@ -1,8 +1,9 @@
 .carousel {
     min-height: 345px;
     position: relative;
-    padding-top: 100px;
+    padding-top: 50px;
     box-sizing: border-box;
+    line-height: 30px;
     @media(max-width: 1199px) {
       padding-top: 0;
     }
@@ -26,7 +27,7 @@
         display: none;
         color: #bec2c7;
         position: absolute;
-        top: 20%;
+        top: 40%;
         text-align: center;
         width: 40px;
         z-index: 10;
@@ -51,7 +52,7 @@
         margin: 0;
         padding: 0;
         position: absolute;
-        bottom: -25%;
+        bottom: -60%;
         left: 0;
         right: 0;
         text-align: center;
@@ -64,7 +65,7 @@
             display: none;
         }
         @media(max-width: 699px) {
-          bottom: -30%;
+          bottom: -100%;
         }
     }
     &__bullet {
@@ -93,6 +94,8 @@
         @media(max-width: 699px) {
           position: absolute;
           top: 65px;
+          left: 0;
+          right: 0;
         }
     }
     &__author-info {
@@ -108,10 +111,20 @@
             font-family: 'Georgia';
             color: $dark-gray;
             position: absolute;
-            top: 20px;
+            top: 115px;
             left: 50%;
             margin-left: -50px;
         }
+    }
+    &__text {
+      font-size: $font-size-sm;
+      margin-bottom: 50px;
+      @media(max-width: 699px) {
+        padding-top: 80px;
+        padding-left: 5%;
+        padding-right: 10%;
+        line-height: 40px;
+      }
     }
     &__text--quotes {
         @media(min-width: 1200px) {

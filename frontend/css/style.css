@@ -309,7 +309,7 @@
     z-index: -1;
     width: 150%;
     height: 700px;
-    top: 350px;
+    top: 340px;
     left: -1px;
     -webkit-transform: rotate(-4.5deg);
     -ms-transform: rotate(-4.5deg);
@@ -496,8 +496,9 @@
 .carousel {
   min-height: 345px;
   position: relative;
-  padding-top: 100px;
-  box-sizing: border-box; }
+  padding-top: 50px;
+  box-sizing: border-box;
+  line-height: 30px; }
   @media (max-width: 1199px) {
     .carousel {
       padding-top: 0; } }
@@ -518,7 +519,7 @@
     display: none;
     color: #bec2c7;
     position: absolute;
-    top: 20%;
+    top: 40%;
     text-align: center;
     width: 40px;
     z-index: 10; }
@@ -540,7 +541,7 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    bottom: -25%;
+    bottom: -60%;
     left: 0;
     right: 0;
     text-align: center;
@@ -553,7 +554,7 @@
         display: none; } }
     @media (max-width: 699px) {
       .carousel__indicators {
-        bottom: -30%; } }
+        bottom: -100%; } }
   .carousel__bullet {
     display: block;
     height: 6px;
@@ -578,7 +579,9 @@
     @media (max-width: 699px) {
       .carousel__author {
         position: absolute;
-        top: 65px; } }
+        top: 65px;
+        left: 0;
+        right: 0; } }
   .carousel__author-info {
     display: block; }
     @media (max-width: 699px) {
@@ -591,9 +594,18 @@
       font-family: 'Georgia';
       color: #dedede;
       position: absolute;
-      top: 20px;
+      top: 115px;
       left: 50%;
       margin-left: -50px; } }
+  .carousel__text {
+    font-size: 1.4rem;
+    margin-bottom: 50px; }
+    @media (max-width: 699px) {
+      .carousel__text {
+        padding-top: 80px;
+        padding-left: 5%;
+        padding-right: 10%;
+        line-height: 40px; } }
   @media (min-width: 1200px) {
     .carousel__text--quotes {
       display: none; } }
@@ -604,6 +616,7 @@
   display: block; }
 
 .price-table {
+  width: 100%;
   margin: 0 auto;
   border: solid 3px #dedede;
   border-collapse: collapse;
@@ -615,19 +628,23 @@
   .price-table__hidden {
     visibility: hidden; }
   .price-table__option {
-    padding: 10px 60px 10px 22px;
+    padding: 10px 0 10px 1%;
+    width: 20%;
     color: #283645;
     background-color: #fff; }
   .price-table__rate {
     position: relative;
     text-align: center;
-    width: 125px;
-    padding: 12px 80px;
+    width: 20%;
+    padding: 12px 0px;
     background-color: #283645;
     color: #fff;
     border: solid #fff 3px; }
     .price-table__rate--price {
       font-size: 2.4rem;
+      min-width: 100px;
+      font-weight: 100;
+      opacity: 0.8;
       display: block; }
     .price-table__rate--hit-icon {
       position: absolute;
@@ -650,10 +667,13 @@
 .price-list {
   position: relative;
   width: 100%;
+  padding: 150px 10% 95px 10%;
   margin-bottom: 95px;
   overflow-x: hidden;
-  padding-top: 150px;
-  padding-bottom: 95px; }
+  box-sizing: border-box; }
+  @media (max-width: 1199px) {
+    .price-list {
+      padding: 150px 5% 95px 5%; } }
   .price-list::before {
     content: " ";
     position: absolute;
@@ -667,6 +687,12 @@
     transform: rotate(-4.5deg);
     background-color: #f2f2f2;
     background-clip: content-box; }
+    @media (max-width: 1199px) {
+      .price-list::before {
+        top: 30px; } }
+    @media (max-width: 699px) {
+      .price-list::before {
+        top: 110px; } }
   .price-list::after {
     content: " ";
     position: absolute;

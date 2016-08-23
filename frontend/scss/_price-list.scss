@@ -1,4 +1,5 @@
 .price-table {
+  width: 100%;
     margin: 0 auto;
     border: solid 3px $dark-gray;
     border-collapse: collapse;
@@ -12,20 +13,24 @@
         visibility: hidden;
     }
     &__option {
-        padding: 10px 60px 10px 22px;
+        padding: 10px 0 10px 1%;
+        width: 20%;
         color: $blue;
         background-color: $white;
     }
     &__rate {
         position: relative;
         text-align: center;
-        width: 125px;
-        padding: 12px 80px;
+        width: 20%;
+        padding: 12px 0px;
         background-color: $blue;
         color: $white;
         border: solid $white 3px;
         &--price {
             font-size: $font-size--md;
+            min-width: 100px;
+            font-weight: 100;
+            opacity: 0.8;
             display: block;
         }
         &--hit-icon {
@@ -55,10 +60,13 @@
 .price-list {
   position: relative;
   width: 100%;
+  padding: 150px 10% 95px 10%;
   margin-bottom: 95px;
   overflow-x: hidden;
-  padding-top: 150px;
-  padding-bottom: 95px;
+  box-sizing: border-box;
+  @media(max-width: 1199px) {
+    padding: 150px 5% 95px 5%;
+  }
   &::before {
     content: " ";
     position: absolute;
@@ -70,6 +78,12 @@
     transform: rotate(-4.5deg);
     background-color: #f2f2f2;
     background-clip: content-box;
+    @media(max-width: 1199px) {
+      top: 30px;
+    }
+    @media(max-width: 699px) {
+      top: 110px;
+    }
   }
   &::after {
     content: " ";
