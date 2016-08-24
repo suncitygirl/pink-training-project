@@ -1,5 +1,5 @@
 .price-table {
-  width: 100%;
+    width: 100%;
     margin: 0 auto;
     border: solid 3px $dark-gray;
     border-collapse: collapse;
@@ -22,21 +22,44 @@
         position: relative;
         text-align: center;
         width: 20%;
-        padding: 12px 0px;
+        padding: 12px 0;
         background-color: $blue;
         color: $white;
         border: solid $white 3px;
+        @media(max-width: 699px) {
+            height: 105px;
+            font-size: $font-size--md;
+            line-height: 45px;
+            font-weight: 100;
+            padding: 15px 0;
+        }
         &--price {
             font-size: $font-size--md;
             min-width: 100px;
             font-weight: 100;
             opacity: 0.8;
             display: block;
+            @media(max-width: 699px) {
+                font-size: $font-size--bg;
+            }
         }
         &--hit-icon {
-          position: absolute;
-          top:0;
-          left: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 74px;
+            height: 73px;
+            @media(max-width: 699px) {
+              top: -1px;
+              left: -2px;
+              width: 100px;
+              height: 100px;
+              #hit {
+                width: 100px;
+                height: 100px;
+              }
+            }
+
         }
     }
     &__icon {
@@ -44,56 +67,125 @@
         padding-top: 16px;
         padding-bottom: 12px;
         background-color: $white;
+        @media(max-width: 699px) {
+          position: relative;
+            height: 41px;
+            &--text {
+                display: inline-block;
+                width: 80%;
+                padding-left: 30px;
+                text-transform: uppercase;
+                line-height: 50px;
+            }
+        }
         &--check {
             max-width: 100%;
             max-height: 100%;
             fill: $green;
+            @media(max-width: 699px) {
+                position: absolute;
+                width: 40px;
+                top: 0;
+            }
         }
         &--cross {
             max-width: 100%;
             max-height: 100%;
             fill: $red;
+            @media(max-width: 699px) {
+                position: absolute;
+                width: 33px;
+                top: 0;
+            }
+        }
+    }
+    @media(max-width: 699px) {
+        position: relative;
+        transition-property: left;
+        transition-duration: 0.5s;
+        text-transform: uppercase;
+        &__option {
+            display: none;
+        }
+        &__hidden {
+            display: none;
+        }
+        &__open-standard:checked ~ .price-table {
+            top: 0;
+            left: -31.4%;
+        }
+        &__open-base:checked ~ .price-table {
+            top: 0;
+            left: 1.6%;
+        }
+        &__open-unlim:checked ~ .price-table {
+            top: 0;
+            left: -(31.4% + 33.2%);
         }
     }
 }
-
 .price-list {
-  position: relative;
-  width: 100%;
-  padding: 150px 10% 95px 10%;
-  margin-bottom: 95px;
-  overflow-x: hidden;
-  box-sizing: border-box;
-  @media(max-width: 1199px) {
-    padding: 150px 5% 95px 5%;
-  }
-  &::before {
-    content: " ";
-    position: absolute;
-    z-index: -1;
-    width: 150%;
-    height: 200px;
-    top: 30px;
-    left: -1px;
-    transform: rotate(-4.5deg);
-    background-color: #f2f2f2;
-    background-clip: content-box;
+    position: relative;
+    width: 100%;
+    padding: 150px 10% 95px;
+    margin-bottom: 95px;
+    overflow-x: hidden;
+    box-sizing: border-box;
     @media(max-width: 1199px) {
-      top: 30px;
+        padding: 150px 5% 95px;
     }
     @media(max-width: 699px) {
-      top: 110px;
+        margin-bottom: 0;
+        padding-bottom: 130px;
+        overflow-y: hidden;
+        padding-left: 0;
+        padding-right: 0;
+        width: 270%;
+        &__wrapper {
+            padding-top: 77px;
+            width: 100%;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
     }
-  }
-  &::after {
-    content: " ";
-    position: absolute;
-    z-index: -1;
-    width: 150%;
-    height: 340px;
-    top: 200px;
-    left: -1px;
-    background-color: #f2f2f2;
-    background-clip: content-box;
-  }
+    &::before {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        width: 150%;
+        height: 200px;
+        top: 30px;
+        left: -1px;
+        transform: rotate(-4.5deg);
+        background-color: #f2f2f2;
+        background-clip: content-box;
+        @media(max-width: 1199px) {
+            top: 30px;
+        }
+        @media(max-width: 699px) {
+            top: -30px;
+        }
+    }
+    &::after {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        width: 150%;
+        height: 340px;
+        top: 200px;
+        left: -1px;
+        background-color: #f2f2f2;
+        background-clip: content-box;
+        @media(max-width: 699px) {
+            top: 320px;
+        }
+    }
+    @media(max-width: 699px) {
+        &__indicators {
+            display: block;
+            position: absolute;
+            bottom: 65px - 21px/2;
+            left: -63%;
+        }
+    }
 }
