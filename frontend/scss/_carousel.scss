@@ -70,10 +70,11 @@
     }
     &__bullet {
         display: block;
-        height: 6px;
-        width: 6px;
-        border: solid 4px;
+        height: 7px;
+        width: 7px;
+        border: solid 3px white;
         border-radius: 50px;
+        background-color: #b5b9be;
         cursor: pointer;
         display: block;
         font-size: 35px;
@@ -133,7 +134,14 @@
     }
 }
 #carousel__open--1:checked ~ .carousel__control--1,
-#carousel__open--2:checked ~ .carousel__control--2,
+#carousel__open--1:checked ~ .carousel__control--1,
 #carousel__open--3:checked ~ .carousel__control--3 {
     display: block;
+}
+
+#carousel__open--1:checked ~ .carousel__indicators .carousel__bullet--1,
+#carousel__open--2:checked ~ .carousel__indicators .carousel__bullet--2,
+#carousel__open--3:checked ~ .carousel__indicators .carousel__bullet--3 {
+  background-color: $white;
+  border: solid 3px $blue;
 }
