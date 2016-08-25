@@ -792,6 +792,7 @@
 
 .contact {
   position: relative;
+  z-index: 3;
   min-height: 345px;
   padding-top: 40px;
   padding-left: 15%;
@@ -820,7 +821,7 @@
         font-size: 2.4rem; } }
   .contact__item {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     display: block;
     float: left;
     width: 28%;
@@ -831,6 +832,7 @@
     @media (max-width: 1199px) {
       .contact__item--address {
         position: absolute;
+        z-index: 3;
         bottom: 0;
         left: 50%;
         -webkit-transform: translate(-50%, 0);
@@ -866,8 +868,8 @@
   .contact::after {
     content: '';
     position: absolute;
-    z-index: 0;
-    bottom: -125px;
+    z-index: 2;
+    bottom: -124px;
     left: 0;
     background: linear-gradient(to left bottom, #fff 50%, transparent 50%);
     height: 125px;
@@ -875,16 +877,16 @@
     @media (max-width: 1199px) {
       .contact::after {
         height: 70px;
-        bottom: -70px; } }
+        bottom: -69px; } }
     @media (max-width: 699px) {
       .contact::after {
         height: 35px;
-        bottom: -35px; } }
+        bottom: -34px; } }
   .contact::before {
     content: '';
     position: absolute;
-    z-index: 0;
-    bottom: -125px;
+    z-index: 2;
+    bottom: -124px;
     right: 0;
     background: linear-gradient(to right bottom, #fff 50%, transparent 50%);
     height: 125px;
@@ -892,22 +894,30 @@
     @media (max-width: 1199px) {
       .contact::before {
         height: 70px;
-        bottom: -70px; } }
+        bottom: -69px; } }
     @media (max-width: 699px) {
       .contact::before {
         height: 35px;
-        bottom: -35px; } }
+        bottom: -34px; } }
 
 .map {
   position: relative;
   top: -125px;
-  z-index: -1;
-  height: 500px;
+  z-index: 1;
+  height: 525px;
   width: 100%;
   background-color: blue; }
+  @media (max-width: 1199px) {
+    .map {
+      height: 375px;
+      top: -70px; } }
+  @media (max-width: 699px) {
+    .map {
+      height: 205px;
+      top: -35px; } }
 
 #map {
-  height: 525px;
+  height: 100%;
   width: 100%; }
 
 html {

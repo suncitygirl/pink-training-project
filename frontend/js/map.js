@@ -12,12 +12,14 @@
     myMap.behaviors.disable("scrollZoom");
     myMap.controls.add("zoomControl");
 
-    // myPlacemark = new ymaps.Placemark([59.93866675783276,30.32307250000002], {
-    //   hintContent: "г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8",
-    // }, {
-    //   iconLayout: "default#image"
-    // });
-    //
-    // myMap.geoObjects.add(myPlacemark);
+    myPlacemark = new ymaps.Placemark([59.9363, 30.321132], {
+      hintContent: "Санкт-Петербург, Невский проспект, д.20",
+    }, {
+      iconLayout: "default#image",
+      iconImageHref: "img/map-placemark.png",
+      iconImageSize: [37, 36],
+    });
+
+    myMap.geoObjects.add(myPlacemark);
   }
 })();

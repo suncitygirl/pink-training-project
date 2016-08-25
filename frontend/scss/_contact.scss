@@ -1,5 +1,6 @@
 .contact {
     position: relative;
+    z-index: 3;
     min-height: 345px;
     padding-top: 40px;
     padding-left: 180px/1200px * 100%;
@@ -28,8 +29,8 @@
         }
     }
     &__item {
-      position: relative;
-      z-index: 1;
+        position: relative;
+        z-index: 3;
         display: block;
         float: left;
         width: 28%;
@@ -41,6 +42,7 @@
         @media(max-width: 1199px) {
             &--address {
                 position: absolute;
+                z-index: 3;
                 bottom: 0;
                 left: 50%;
                 transform: translate(-50%, 0);
@@ -83,37 +85,37 @@
     &::after {
         content: '';
         position: absolute;
-        z-index: 0;
-        bottom: -125px;
+        z-index: 2;
+        bottom: -124px;
         left: 0;
         background: linear-gradient(to left bottom, $white 50%, transparent 50%);
         height: 125px;
         width: 50%;
         @media(max-width: 1199px) {
             height: 70px;
-            bottom: -70px;
+            bottom: -69px;
         }
         @media(max-width: 699px) {
             height: 35px;
-            bottom: -35px;
+            bottom: -34px;
         }
     }
     &::before {
         content: '';
         position: absolute;
-        z-index: 0;
-        bottom: -125px;
+        z-index: 2;
+        bottom: -124px;
         right: 0;
         background: linear-gradient(to right bottom, $white 50%, transparent 50%);
         height: 125px;
         width: 50%;
         @media(max-width: 1199px) {
             height: 70px;
-            bottom: -70px;
+            bottom: -69px;
         }
         @media(max-width: 699px) {
             height: 35px;
-            bottom: -35px;
+            bottom: -34px;
         }
     }
 }

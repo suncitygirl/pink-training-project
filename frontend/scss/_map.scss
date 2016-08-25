@@ -1,12 +1,20 @@
 .map {
   position: relative;
   top: -125px;
-  z-index: -1;
-  height: 500px;
+  z-index: 1;
+  height: 525px;
   width: 100%;
   background-color: blue;
+  @media(max-width: 1199px) {
+    height: 375px;
+    top: -70px;
+  }
+  @media(max-width: 699px) {
+    height: 205px;
+    top: -35px;
+  }
 }
 #map {
-  height: 525px;
+  height: 100%;
   width: 100%;
 }
