@@ -731,7 +731,6 @@
   position: relative;
   width: 100%;
   padding: 150px 10% 95px;
-  margin-bottom: 95px;
   overflow-x: hidden;
   box-sizing: border-box; }
   @media (max-width: 1199px) {
@@ -790,6 +789,78 @@
       left: -63%; }
       .price-list__indicators label {
         border: solid 3px #f2f2f2; } }
+
+.contact {
+  position: relative;
+  min-height: 345px;
+  padding-top: 50px;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  background-color: #fff;
+  background-color: yellow; }
+  @media (max-width: 1199px) {
+    .contact {
+      min-height: 480px;
+      padding-left: 7.91667%;
+      padding-right: 7.91667%; } }
+  .contact__header {
+    display: block;
+    margin: 0 auto;
+    width: 465px;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: 70px; }
+  .contact__item {
+    display: block;
+    float: left;
+    width: 28%;
+    vertical-align: top;
+    text-align: center; }
+    .contact__item:not(:last-child) {
+      margin-right: 7.08333%; }
+    @media (max-width: 1199px) {
+      .contact__item--address {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        transform: translate(-50%, 0); }
+      .contact__item:not(:last-child) {
+        margin-right: 0; }
+      .contact__item--phone {
+        float: left; }
+      .contact__item--feedback {
+        float: right; } }
+  .contact__info {
+    font-size: 2.4rem;
+    color: #d22856;
+    font-weight: 300; }
+  .contact__mark {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 20px; }
+  .contact::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: -125px;
+    left: 0;
+    background: linear-gradient(to left bottom, yellow 50%, transparent 50%);
+    height: 125px;
+    width: 50%; }
+  .contact::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: -125px;
+    right: 0;
+    background: linear-gradient(to right bottom, yellow 50%, transparent 50%);
+    height: 125px;
+    width: 50%; }
 
 html {
   font-size: 10px;

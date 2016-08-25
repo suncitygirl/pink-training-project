@@ -1,0 +1,82 @@
+.contact {
+    position: relative;
+    min-height: 345px;
+    padding-top: 50px;
+    padding-left: 180px/1200px * 100%;
+    padding-right: 180px/1200px * 100%;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    background-color: $white;
+    background-color: yellow;
+    @media(max-width: 1199px) {
+        min-height: 480px;
+        padding-left: 95px/1200px * 100%;
+        padding-right: 95px/1200px * 100%;
+    }
+    &__header {
+        display: block;
+        margin: 0 auto;
+        width: 465px;
+        text-align: center;
+        font-size: $font-size--lg;
+        font-weight: 300;
+        margin-bottom: 70px;
+    }
+    &__item {
+        display: block;
+        float: left;
+        width: 28%;
+        vertical-align: top;
+        text-align: center;
+        &:not(:last-child) {
+            margin-right: 85px/1200px * 100%;
+        }
+        @media(max-width: 1199px) {
+            &--address {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+            &--phone {
+                float: left;
+            }
+            &--feedback {
+                float: right;
+            }
+        }
+    }
+    &__info {
+        font-size: $font-size--md;
+        color: $pink;
+        font-weight: 300;
+    }
+    &__mark {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: -125px;
+        left: 0;
+        background: linear-gradient(to left bottom, yellow 50%, transparent 50%);
+        height: 125px;
+        width: 50%;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: -125px;
+        right: 0;
+        background: linear-gradient(to right bottom, yellow 50%, transparent 50%);
+        height: 125px;
+        width: 50%;
+    }
+}

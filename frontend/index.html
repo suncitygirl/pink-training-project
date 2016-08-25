@@ -225,7 +225,7 @@
         </section>
         <section class="carousel">
             <div class="carousel__inner">
-                <input class="carousel__open" type="radio" id="carousel__open--1" name="carousel" hidden checked>
+                <input class="carousel__open" type="radio" id="carousel__open--1" name="carousel" hidden>
                 <div class="carousel__item">
                     <div class="carousel__item-content">
                         <p class="carousel__text"><span class="carousel__text--quotes">«</span>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<span class="carousel__text--quotes">»</span></p>
@@ -233,10 +233,13 @@
                         <span class="carousel__author-info">25 лет, водитель трамвая</span>
                     </div>
                 </div>
-                <input class="carousel__open" type="radio" id="carousel__open--2" name="carousel" hidden>
+                <input class="carousel__open" type="radio" id="carousel__open--2" name="carousel" hidden checked>
                 <div class="carousel__item">
                     <div class="carousel__item-content">
-                        <p class="carousel__text"><span class="carousel__text--quotes">«</span>В Pink все просто до эффекта волшебства. Выбираешь существующее фото или делаешь новое — выбираешь стиль — секунд через пять получаешь новое фото — публикуешь его или сохраняешь на телефон!<span class="carousel__text--quotes">»</span></p>
+                        <p class="carousel__text"><span class="carousel__text--quotes">«</span>В Pink все просто до эффекта волшебства. Выбираешь существующее фото или делаешь новое — выбираешь стиль — секунд через пять получаешь новое фото — публикуешь его или сохраняешь на телефон!
+                            <span
+                              class="carousel__text--quotes">»</span>
+                        </p>
                         <b class="carousel__author">Валентина Иванова</b>
                         <span class="carousel__author-info">32 года, домохозяйка</span>
                     </div>
@@ -295,19 +298,19 @@
                             Розовый фильтр
                         </td>
                         <td class="price-table__icon price-table__base">
-                          <span class="price-table__icon--text" hidden>Розовый фильтр</span>
+                            <span class="price-table__icon--text" hidden>Розовый фильтр</span>
                             <svg class="price-table__icon--check">
                                 <use xlink:href="#yes"></use>
                             </svg>
                         </td>
                         <td class="price-table__icon price-table__standard">
-                          <span class="price-table__icon--text" hidden>Розовый фильтр</span>
+                            <span class="price-table__icon--text" hidden>Розовый фильтр</span>
                             <svg class="price-table__icon--check">
                                 <use xlink:href="#yes"></use>
                             </svg>
                         </td>
                         <td class="price-table__icon price-table__unlim">
-                          <span class="price-table__icon--text" hidden>Розовый фильтр</span>
+                            <span class="price-table__icon--text" hidden>Розовый фильтр</span>
                             <svg class="price-table__icon--check">
                                 <use xlink:href="#yes"></use>
                             </svg>
@@ -318,19 +321,19 @@
                             Смайлики
                         </td>
                         <td class="price-table__icon price-table__base">
-                          <span class="price-table__icon--text" hidden>Смайлики</span>
+                            <span class="price-table__icon--text" hidden>Смайлики</span>
                             <svg class="price-table__icon--cross">
                                 <use xlink:href="#no"></use>
                             </svg>
                         </td>
                         <td class="price-table__icon">
-                          <span class="price-table__icon--text" hidden>Смайлики</span>
+                            <span class="price-table__icon--text" hidden>Смайлики</span>
                             <svg class="price-table__icon--check price-table__standard">
                                 <use xlink:href="#yes"></use>
                             </svg>
                         </td>
                         <td class="price-table__icon">
-                          <span class="price-table__icon--text" hidden>Смайлики</span>
+                            <span class="price-table__icon--text" hidden>Смайлики</span>
                             <svg class="price-table__icon--check price-table__unlim">
                                 <use xlink:href="#yes"></use>
                             </svg>
@@ -341,19 +344,19 @@
                             Комментарии
                         </td>
                         <td class="price-table__icon price-table__base">
-                          <span class="price-table__icon--text" hidden>Комментарии</span>
+                            <span class="price-table__icon--text" hidden>Комментарии</span>
                             <svg class="price-table__icon--cross">
                                 <use xlink:href="#no"></use>
                             </svg>
                         </td>
                         <td class="price-table__icon price-table__standard">
-                          <span class="price-table__icon--text" hidden>Комментарии</span>
+                            <span class="price-table__icon--text" hidden>Комментарии</span>
                             <svg class="price-table__icon--cross">
                                 <use xlink:href="#no"></use>
                             </svg>
                         </td>
                         <td class="price-table__icon price-table__unlim">
-                          <span class="price-table__icon--text" hidden>Комментарии</span>
+                            <span class="price-table__icon--text" hidden>Комментарии</span>
                             <svg class="price-table__icon--check">
                                 <use xlink:href="#yes"></use>
                             </svg>
@@ -375,15 +378,15 @@
         </div>
         <section class="contact">
             <h2 class="contact__header">Остались вопросы? Свяжитесь с нами!</h2>
-            <div class="contact__item">
+            <div class="contact__item contact__item--phone">
                 <span class="contact__mark">Звоните:</span>
                 <span class="contact__info">8 (800) 1000 900</span>
             </div>
-            <div class="contact__item">
+            <div class="contact__item contact__item--address">
                 <span class="contact__mark">Приезжайте в гости:</span>
-                <span class="contact__info">Санкт-Петербург, Невский проспект, д. 20</span>
+                <span class="contact__info">Санкт-Петербург, Невский проспект, д.20</span>
             </div>
-            <div class="contact__item">
+            <div class="contact__item contact__item--feedback">
                 <span class="contact__mark">Пишите:</span>
                 <span class="contact__info">hello@pinkapp.ru</span>
             </div>
