@@ -793,7 +793,7 @@
 .contact {
   position: relative;
   min-height: 345px;
-  padding-top: 50px;
+  padding-top: 40px;
   padding-left: 15%;
   padding-right: 15%;
   margin-bottom: 40px;
@@ -813,6 +813,12 @@
     font-size: 5rem;
     font-weight: 300;
     margin-bottom: 70px; }
+    @media (max-width: 699px) {
+      .contact__header {
+        width: 225px;
+        padding-top: 40px;
+        margin-bottom: 40px;
+        font-size: 2.4rem; } }
   .contact__item {
     display: block;
     float: left;
@@ -835,6 +841,16 @@
         float: left; }
       .contact__item--feedback {
         float: right; } }
+    @media (max-width: 699px) {
+      .contact__item {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 24px;
+        text-align: center; }
+        .contact__item--address {
+          bottom: 28px;
+          width: 423px; } }
   .contact__info {
     font-size: 2.4rem;
     color: #d22856;
@@ -843,6 +859,9 @@
     display: block;
     font-weight: 700;
     margin-bottom: 20px; }
+    @media (max-width: 699px) {
+      .contact__mark {
+        margin-bottom: 8px; } }
   .contact::after {
     content: '';
     position: absolute;
@@ -852,6 +871,14 @@
     background: linear-gradient(to left bottom, yellow 50%, transparent 50%);
     height: 125px;
     width: 50%; }
+    @media (max-width: 1199px) {
+      .contact::after {
+        height: 70px;
+        bottom: -70px; } }
+    @media (max-width: 699px) {
+      .contact::after {
+        height: 35px;
+        bottom: -35px; } }
   .contact::before {
     content: '';
     position: absolute;
@@ -861,6 +888,14 @@
     background: linear-gradient(to right bottom, yellow 50%, transparent 50%);
     height: 125px;
     width: 50%; }
+    @media (max-width: 1199px) {
+      .contact::before {
+        height: 70px;
+        bottom: -70px; } }
+    @media (max-width: 699px) {
+      .contact::before {
+        height: 35px;
+        bottom: -35px; } }
 
 html {
   font-size: 10px;

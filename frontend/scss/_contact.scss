@@ -1,7 +1,7 @@
 .contact {
     position: relative;
     min-height: 345px;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-left: 180px/1200px * 100%;
     padding-right: 180px/1200px * 100%;
     margin-bottom: 40px;
@@ -21,6 +21,12 @@
         font-size: $font-size--lg;
         font-weight: 300;
         margin-bottom: 70px;
+        @media(max-width: 699px) {
+            width: 225px;
+            padding-top: 40px;
+            margin-bottom: 40px;
+            font-size: $font-size--md;
+        }
     }
     &__item {
         display: block;
@@ -48,6 +54,17 @@
                 float: right;
             }
         }
+        @media(max-width: 699px) {
+            float: none;
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 24px;
+            text-align: center;
+            &--address {
+                bottom: 28px;
+                width: 423px;
+            }
+        }
     }
     &__info {
         font-size: $font-size--md;
@@ -58,6 +75,9 @@
         display: block;
         font-weight: 700;
         margin-bottom: 20px;
+        @media(max-width: 699px) {
+            margin-bottom: 8px;
+        }
     }
     &::after {
         content: '';
@@ -68,6 +88,14 @@
         background: linear-gradient(to left bottom, yellow 50%, transparent 50%);
         height: 125px;
         width: 50%;
+        @media(max-width: 1199px) {
+            height: 70px;
+            bottom: -70px;
+        }
+        @media(max-width: 699px) {
+            height: 35px;
+            bottom: -35px;
+        }
     }
     &::before {
         content: '';
@@ -78,5 +106,13 @@
         background: linear-gradient(to right bottom, yellow 50%, transparent 50%);
         height: 125px;
         width: 50%;
+        @media(max-width: 1199px) {
+            height: 70px;
+            bottom: -70px;
+        }
+        @media(max-width: 699px) {
+            height: 35px;
+            bottom: -35px;
+        }
     }
 }
