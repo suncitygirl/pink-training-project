@@ -798,8 +798,7 @@
   padding-right: 15%;
   margin-bottom: 40px;
   box-sizing: border-box;
-  background-color: #fff;
-  background-color: yellow; }
+  background-color: #fff; }
   @media (max-width: 1199px) {
     .contact {
       min-height: 480px;
@@ -820,6 +819,8 @@
         margin-bottom: 40px;
         font-size: 2.4rem; } }
   .contact__item {
+    position: relative;
+    z-index: 1;
     display: block;
     float: left;
     width: 28%;
@@ -865,10 +866,10 @@
   .contact::after {
     content: '';
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     bottom: -125px;
     left: 0;
-    background: linear-gradient(to left bottom, yellow 50%, transparent 50%);
+    background: linear-gradient(to left bottom, #fff 50%, transparent 50%);
     height: 125px;
     width: 50%; }
     @media (max-width: 1199px) {
@@ -882,10 +883,10 @@
   .contact::before {
     content: '';
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     bottom: -125px;
     right: 0;
-    background: linear-gradient(to right bottom, yellow 50%, transparent 50%);
+    background: linear-gradient(to right bottom, #fff 50%, transparent 50%);
     height: 125px;
     width: 50%; }
     @media (max-width: 1199px) {
@@ -896,6 +897,18 @@
       .contact::before {
         height: 35px;
         bottom: -35px; } }
+
+.map {
+  position: relative;
+  top: -125px;
+  z-index: -1;
+  height: 500px;
+  width: 100%;
+  background-color: blue; }
+
+#map {
+  height: 525px;
+  width: 100%; }
 
 html {
   font-size: 10px;
