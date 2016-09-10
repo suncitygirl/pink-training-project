@@ -10,6 +10,11 @@
   width: 100%;
   max-width: 960px; }
 
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
 .main-nav {
   display: block;
   width: 100%;
@@ -905,8 +910,7 @@
   top: -125px;
   z-index: 1;
   height: 525px;
-  width: 100%;
-  background-color: blue; }
+  width: 100%; }
   @media (max-width: 1199px) {
     .map {
       height: 375px;
@@ -919,6 +923,75 @@
 #map {
   height: 100%;
   width: 100%; }
+
+.main-footer {
+  width: 100%;
+  box-sizing: border-box; }
+  @media (min-width: 1200px) {
+    .main-footer {
+      padding: 0 10%; } }
+  @media (max-width: 1199px) {
+    .main-footer {
+      padding: 0 5.71429%; } }
+  @media (max-width: 699px) {
+    .main-footer {
+      display: none; } }
+  .main-footer__container {
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 960px;
+    height: 200px;
+    margin: 0 auto; }
+    @media (max-width: 1199px) {
+      .main-footer__container {
+        height: 130px; } }
+  .main-footer__logo {
+    width: 166px;
+    height: 56px; }
+    .main-footer__logo--desktop, .main-footer__logo--tablet {
+      display: none;
+      max-width: 100%;
+      max-height: 100%; }
+    @media (min-width: 1200px) {
+      .main-footer__logo--desktop {
+        display: block; } }
+    @media (max-width: 1199px) {
+      .main-footer__logo--tablet {
+        display: block; } }
+  .main-footer__social-wrapper {
+    font-size: 0; }
+  .main-footer__social-icon {
+    width: 50px;
+    height: 30px;
+    margin-right: 10px;
+    fill: #d22856; }
+    .main-footer__social-icon--youtube {
+      margin-right: 0; }
+  .main-footer__copyright {
+    width: 160px; }
+
+.grid__item--footer {
+  margin-top: -125px; }
+  @media (max-width: 1199px) {
+    .grid__item--footer {
+      margin-top: -70px; } }
+  @media (max-width: 699px) {
+    .grid__item--footer {
+      display: none; } }
 
 html {
   font-size: 10px;

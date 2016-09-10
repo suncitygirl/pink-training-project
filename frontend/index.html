@@ -392,21 +392,38 @@
         </section>
         <div class="map">
             <div id="map"></div>
-            <!---<img src="" alt="" />-->
-
-
         </div>
     </main>
-    <footer class="main-footer">
-        <svg class="logo-desktop--black">
-            <use xlink:href="#logo-desktop--black"></use>
-        </svg>
-        <div class="main-footer__social">
-            <div class="social__icon  social__icon--twitter"></div>
-            <div class="social__icon  social__icon--twitter"></div>
-            <div class="social__icon  social__icon--twitter"></div>
-        </div>
-        <div class="main-footer__copyright">
+    <footer class="main-footer grid__item--footer">
+        <div class="main-footer__container">
+            <div class="main-footer__logo">
+                <svg class="main-footer__logo--desktop">
+                    <use xlink:href="#logo-desktop--black"></use>
+                </svg>
+                <svg class="main-footer__logo--tablet">
+                    <use xlink:href="#logo-tablet"></use>
+                </svg>
+            </div>
+            <div class="main-footer__social-wrapper">
+                <a href="#">
+                    <svg class="main-footer__social-icon  main-footer__social-icon--twitter">
+                        <use xlink:href="#twitter"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="main-footer__social-icon  main-footer__social-icon--facebook">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="main-footer__social-icon  main-footer__social-icon--youtube">
+                        <use xlink:href="#youtube"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="main-footer__copyright">
+                github.com/suncitygirl
+            </div>
         </div>
     </footer>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
