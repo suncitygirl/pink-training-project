@@ -1,11 +1,12 @@
 .carousel {
     min-height: 345px;
     position: relative;
-    padding-top: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
     line-height: 30px;
     @media(max-width: 1199px) {
-      padding-top: 0;
+        padding-top: 0;
     }
     &__inner {
         position: relative;
@@ -44,7 +45,7 @@
             }
         }
         @media(max-width: 1199px) {
-          font-size: 0;
+            font-size: 0;
         }
     }
     &__indicators {
@@ -65,7 +66,7 @@
             display: none;
         }
         @media(max-width: 699px) {
-          bottom: -100%;
+            bottom: -100%;
         }
     }
     &__bullet {
@@ -84,7 +85,7 @@
         padding: 60px (260px/1200px * 100%);
         text-align: center;
         @media(max-width: 1199px) {
-          padding: 30px 5%;
+            padding: 30px 5%;
         }
     }
     &__author {
@@ -93,16 +94,16 @@
         color: $black;
         font-size: $font-size--md;
         @media(max-width: 699px) {
-          position: absolute;
-          top: 65px;
-          left: 0;
-          right: 0;
+            position: absolute;
+            top: 65px;
+            left: 0;
+            right: 0;
         }
     }
     &__author-info {
         display: block;
         @media(max-width: 699px) {
-          display: none;
+            display: none;
         }
     }
     &::before {
@@ -112,20 +113,20 @@
             font-family: 'Georgia';
             color: $dark-gray;
             position: absolute;
-            top: 115px;
+            top: 140px;
             left: 50%;
             margin-left: -50px;
         }
     }
     &__text {
-      font-size: $font-size-sm;
-      margin-bottom: 50px;
-      @media(max-width: 699px) {
-        padding-top: 80px;
-        padding-left: 5%;
-        padding-right: 10%;
-        line-height: 40px;
-      }
+        font-size: $font-size-sm;
+        margin-bottom: 50px;
+        @media(max-width: 699px) {
+            padding-top: 80px;
+            padding-left: 5%;
+            padding-right: 10%;
+            line-height: 40px;
+        }
     }
     &__text--quotes {
         @media(min-width: 1200px) {
@@ -134,14 +135,13 @@
     }
 }
 #carousel__open--1:checked ~ .carousel__control--1,
-#carousel__open--1:checked ~ .carousel__control--1,
+#carousel__open--2:checked ~ .carousel__control--2,
 #carousel__open--3:checked ~ .carousel__control--3 {
     display: block;
 }
-
 #carousel__open--1:checked ~ .carousel__indicators .carousel__bullet--1,
 #carousel__open--2:checked ~ .carousel__indicators .carousel__bullet--2,
 #carousel__open--3:checked ~ .carousel__indicators .carousel__bullet--3 {
-  background-color: $white;
-  border: solid 3px $blue;
+    background-color: $white;
+    border: solid 3px $blue;
 }

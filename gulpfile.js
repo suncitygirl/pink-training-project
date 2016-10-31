@@ -67,27 +67,27 @@ gulp.task('useref', function () {
       .pipe(gulpIf('*.js', uglify()))
       // Minifies only if it's a CSS file
       .pipe(gulpIf('*.css', cssnano()))
-      .pipe(gulp.dest('public'))
+      .pipe(gulp.dest('dest'))
 });
 
 
 gulp.task('images', function () {
-  return gulp.src('frontend/images/**/*.+(png|jpg|gif|svg)')
+  return gulp.src('frontend/img/**/*.+(png|jpg|gif|svg)')
       .pipe(cache(imagemin({
         interlaced: true
       })))
-      .pipe(gulp.dest('public/images'))
+      .pipe(gulp.dest('dest/img'))
 });
 
 
 gulp.task('fonts', function() {
     return gulp.src('frontend/fonts/**/*')
-        .pipe(gulp.dest('public/fonts'))
+        .pipe(gulp.dest('dest/fonts'))
 });
 
 
-gulp.task('clean:public', function() {
-    return del.sync('public');
+gulp.task('clean:dest', function() {
+    return del.sync('dest');
 });
 
 
@@ -97,7 +97,7 @@ gulp.task('cache:clear', function (callback) {
 
 
 gulp.task('build', function (callback) {
-    runSequence('clean:public',
+    runSequence('clean:dest',
         'sass', 'useref', ['images', 'fonts'],
         callback
     )
@@ -120,12 +120,12 @@ gulp.task('sprites', function () {
         // for example if you want to generate scss instead of css
         //processor: 'sass', // make sure you have installed sprity-sass
     })
-        .pipe(gulpif('*.png', gulp.dest('./public/img/'), gulp.dest('./public/css/sprite')))
+        .pipe(gulpif('*.png', gulp.dest('./dest/img/'), gulp.dest('./dest/css/sprite')))
 });
 
 
 gulp.task('svg-sprites', function () {
   return gulp.src('sprite/*.svg')
       .pipe(svgSprite(config))
-      .pipe(gulp.dest('frontend/img'))
+      .pipe(gulp.dest('a'))
 });

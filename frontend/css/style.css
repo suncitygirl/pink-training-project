@@ -5,16 +5,6 @@
   left: 0;
   width: 100%; }
 
-.container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 960px; }
-
-.main-header {
-  position: absolute;
-  top: 0;
-  left: 0; }
-
 .main-nav {
   display: block;
   width: 100%;
@@ -46,6 +36,7 @@
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    position: relative;
     max-width: 960px;
     margin: 0 auto; }
   @media (min-width: 1200px) {
@@ -71,11 +62,46 @@
         list-style: none; }
       .main-nav__list a {
         color: #fff; }
+        .main-nav__list a:hover {
+          border-bottom: solid #fff 1px;
+          padding-bottom: 2px; }
+        .main-nav__list a:active {
+          border-bottom: none;
+          color: #f2f2f2; }
       .main-nav__list__open-menu {
         display: none; } }
   @media (max-width: 1199px) {
     .main-nav__list {
       display: none; } }
+  @media (max-width: 1199px) {
+    .main-nav__list--mobile {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      position: absolute;
+      z-index: 5;
+      top: 82px;
+      right: 0;
+      width: 100%;
+      list-style: none; }
+      .main-nav__list--mobile li {
+        display: block;
+        width: 120%;
+        margin-left: -10%;
+        padding: 20px 0;
+        text-align: center;
+        border: solid 3px;
+        background-color: #283645;
+        font-size: 20px;
+        border-bottom: solid #151d25 1px; }
+        .main-nav__list--mobile li a {
+          color: #fff; } }
+  @media (max-width: 699px) {
+    .main-nav__list--mobile li {
+      padding: 30px 0; } }
   @media (max-width: 1199px) and (min-width: 700px) {
     .main-nav__open-menu {
       width: 60px;
@@ -88,10 +114,13 @@
     .main-nav__open-menu {
       margin-top: -25px;
       width: 70px; } }
+  .main-nav__open-btn {
+    cursor: pointer; }
   .main-nav__logo {
     display: block;
     width: 146px;
-    height: 46px; }
+    height: 46px;
+    margin-top: -10px; }
     @media (max-width: 699px) {
       .main-nav__logo {
         width: 110px;
@@ -121,6 +150,9 @@
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1; }
+
+.js-hide-menu {
+  display: none; }
 
 .intro {
   padding: 1px;
@@ -171,7 +203,7 @@
     right: 12.5%; }
     @media (max-width: 1199px) {
       .intro__photo {
-        top: -44px;
+        top: -43px;
         right: 5%;
         width: 470px;
         height: 545px;
@@ -233,21 +265,29 @@
       .download-info__slogan {
         display: block;
         width: 300px;
-        margin: 0 auto 460px auto;
+        margin: 0 auto 460px;
         font-size: 3rem;
         opacity: 0.7;
         font-weight: 400; } }
-  .download-info__link {
+  .download-info__btn {
     display: block;
     padding: 15px 0;
     margin-bottom: 45px;
     font-weight: 700;
     color: #fff;
     border: solid 5px;
-    border-radius: 50px; }
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-out; }
+    .download-info__btn:hover {
+      background-color: #fff;
+      color: #d22856;
+      border-color: #fff; }
+    .download-info__btn:active {
+      color: #e67a97; }
     @media (max-width: 699px) {
-      .download-info__link {
-        margin-bottom: 0px;
+      .download-info__btn {
+        margin-bottom: 0;
         padding-top: 20px;
         width: 100%;
         height: 40px;
@@ -367,10 +407,10 @@
       align-items: flex-end;
       padding-right: 5.71429%;
       padding-top: 50px;
-      background: url("../img/iphone-screen-2-3@1x.png") no-repeat 5.71429% 31px; } }
+      background: url("../img/iphone-screen-2-3@1x.png") no-repeat 5.71429% 7%; } }
   @media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (min-resolution: 192dpi) {
     .features {
-      background: url("../img/iphone-screen-2-3@2x.png") no-repeat 5.71429% 31px; } }
+      background: url("../img/iphone-screen-2-3@2x.png") no-repeat 5.71429% 7%; } }
   @media (max-width: 699px) {
     .features {
       margin-top: 80px;
@@ -385,9 +425,7 @@
       -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
       justify-content: flex-start;
-      padding: 0 10%;
-      padding-top: 65px;
-      padding-bottom: 500px;
+      padding: 65px 10% 500px;
       background: url("../img/iphone-screen-1-3@1x.png") no-repeat 50% 100%, url("../img/iphone-case-1@1x.png") no-repeat 50% 100%;
       background-size: 200px auto, 220px auto; } }
   @media (max-width: 699px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 699px) and (min-resolution: 192dpi) {
@@ -416,7 +454,7 @@
       .features__item {
         text-align: center;
         width: 100%;
-        padding-top: 0px; } }
+        padding-top: 0; } }
     .features__item p {
       padding: 0 13px;
       font-size: 1.8rem;
@@ -498,10 +536,16 @@
         width: 270px;
         left: 4.5%; } }
 
+.feature__link {
+  cursor: pointer; }
+  .feature__link:hover {
+    border-bottom: solid #d22856 1px; }
+
 .carousel {
   min-height: 345px;
   position: relative;
-  padding-top: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   box-sizing: border-box;
   line-height: 30px; }
   @media (max-width: 1199px) {
@@ -600,7 +644,7 @@
       font-family: 'Georgia';
       color: #dedede;
       position: absolute;
-      top: 115px;
+      top: 140px;
       left: 50%;
       margin-left: -50px; } }
   .carousel__text {
@@ -617,7 +661,7 @@
       display: none; } }
 
 #carousel__open--1:checked ~ .carousel__control--1,
-#carousel__open--1:checked ~ .carousel__control--1,
+#carousel__open--2:checked ~ .carousel__control--2,
 #carousel__open--3:checked ~ .carousel__control--3 {
   display: block; }
 
@@ -737,7 +781,8 @@
   width: 100%;
   padding: 150px 10% 95px;
   overflow-x: hidden;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow: hidden; }
   @media (max-width: 1199px) {
     .price-list {
       padding: 150px 5% 95px; } }
@@ -982,7 +1027,8 @@
     .main-footer__social-icon--youtube {
       margin-right: 0; }
   .main-footer__copyright {
-    width: 160px; }
+    width: 160px;
+    cursor: pointer; }
 
 .grid__item--footer {
   margin-top: -125px; }
@@ -1003,10 +1049,11 @@ body {
   font-size: 1.8rem;
   line-height: 1.2;
   color: #283645;
-  background-color: #fff; }
+  background-color: #fff;
+  overflow-x: hidden; }
 
-input,
 button,
+input,
 select,
 textarea {
   font-family: inherit;
@@ -1016,5 +1063,10 @@ textarea {
 a {
   color: #d22856;
   text-decoration: none; }
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px; }
 
 /*# sourceMappingURL=maps/style.css.map */

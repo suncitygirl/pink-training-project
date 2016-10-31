@@ -5,13 +5,12 @@
     align-items: center;
     flex-wrap: wrap;
 }
-
 .main-header {
-  position: absolute;
-  top: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
-
 .main-nav {
     display: block;
     width: 100%;
@@ -29,6 +28,7 @@
     }
     &__container {
         @include flex-list();
+        position: relative;
         max-width: 960px;
         margin: 0 auto;
     }
@@ -42,6 +42,14 @@
             }
             & a {
                 color: $white;
+                &:hover {
+                    border-bottom: solid $white 1px;
+                    padding-bottom: 2px;
+                }
+                &:active {
+                    border-bottom: none;
+                    color: $gray;
+                }
             }
             &__open-menu {
                 display: none;
@@ -49,6 +57,37 @@
         }
         @media(max-width: 1199px) {
             display: none;
+        }
+    }
+    &__list--mobile {
+        @media(max-width: 1199px) {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            z-index: 5;
+            top: 82px;
+            right: 0;
+            width: 100%;
+            list-style: none;
+            & li {
+                display: block;
+                width: 120%;
+                margin-left: -10%;
+                padding: 20px 0;
+                text-align: center;
+                border: solid 3px;
+                background-color: $blue;
+                font-size: 20px;
+                border-bottom: solid darken($blue, 10%) 1px;
+                & a {
+                    color: $white;
+                }
+            }
+        }
+        @media(max-width: 699px) {
+            & li {
+                padding: 30px 0;
+            }
         }
     }
     &__open-menu {
@@ -64,12 +103,15 @@
             margin-top: -25px;
             width: 70px;
         }
-
+    }
+    &__open-btn {
+        cursor: pointer;
     }
     &__logo {
         display: block;
         width: 146px;
         height: 46px;
+        margin-top: -10px;
         @media(max-width: 699px) {
             width: 110px;
             margin-top: -25px;
@@ -108,4 +150,7 @@
     &__item:nth-child(2) {
         flex-grow: 1;
     }
+}
+.js-hide-menu {
+    display: none;
 }
